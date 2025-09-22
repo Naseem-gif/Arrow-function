@@ -309,7 +309,7 @@ const getProducts = products.map((products) => {
         </div>`
 })
 
-catArr = []
+catArr = ['All Items']
 
 
 products.forEach(product => {
@@ -317,11 +317,19 @@ products.forEach(product => {
       catArr.push(product.category)
     }
 
-    
-    
-  
 });
-console.log(catArr);
+
+let btn = document.querySelector("#btn")
+
+
+catArr.map((item, index) => 
+    (btn.innerHTML += `<button onclick="filterProducts(${index})">${item}</button>`)
+)
+
+
+
+
+// console.log(catArr);
 
 
 
@@ -336,6 +344,28 @@ console.log(catArr);
 
 // const filteredProducts = products.filter(i => i.price >=  200);
 // console.log(filteredProducts);
+
+
+
+
+// const movies = [
+//   { title: "Inception", year: 2010, rating: 8.8 },
+//   { title: "The Matrix", year: 1999, rating: 8.7 },
+//   { title: "Interstellar", year: 2014, rating: 8.6 },
+//   { title: "The Godfather", year: 1972, rating: 9.2 },
+//   { title: "Parasite", year: 2019, rating: 8.6 },
+//   { title: "The Dark Knight", year: 2008, rating: 9.0 },
+//   { title: "Fight Club", year: 1999, rating: 8.8 },
+//   { title: "Forrest Gump", year: 1994, rating: 8.8 }
+// ];
+
+
+// const recentMovies = movies.filter( (item)=> item.year > 2008 
+    
+//  )
+
+
+// console.log(recentMovies);
 
 
 
